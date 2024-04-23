@@ -1,0 +1,50 @@
+{
+    "name": "hexlet/code",
+    "description": "Gendiff",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/",
+            "Differ\\Differ\\": "src/",
+            "Tests\\": "tests/"
+        },
+        "files": [
+            "src/DiffGenerator.php",
+            "src/Parsers.php",
+            "src/Formatter.php",
+            "src/Formatters/Stylish.php",
+            "src/Formatters/Plain.php",
+            "src/Formatters/Json.php"
+        ]
+    },
+    "bin": [
+        "bin/gendiff"
+    ],
+    "scripts": {
+        "phpcs": "phpcs",
+        "test": "phpunit"
+      },
+    "authors": [
+        {
+            "name": "Dmitry Shelestov",
+            "email": "Lamuska@mail.ru"
+        }
+    ],
+    "require": {
+        "docopt/docopt": "^1.0",
+        "symfony/yaml": "^5.3",
+        "lstrojny/functional-php": "^1.17"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpunit/phpunit": "^9.5",
+        "phpstan/phpstan": "^1.1",
+        "phpstan/extension-installer": "^1.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    }
+}
