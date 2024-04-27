@@ -4,6 +4,13 @@ namespace Differ\Differ\Plain;
 
 use Exception;
 
+/**
+ * Transform $value to string
+
+ * @param mixed $value bool|array|int
+
+ * @return string
+ */
 function toString($value): string
 {
     if ($value === null) {
@@ -15,6 +22,12 @@ function toString($value): string
     return var_export($value, true);
 }
 
+/**
+ * @param array $tree
+ * @param array $propertyNames
+ *
+ * @return string
+ */
 function format(array $tree, array $propertyNames = []): string
 {
     $lines = array_map(function ($item) use ($propertyNames) {
