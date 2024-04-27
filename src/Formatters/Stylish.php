@@ -6,28 +6,40 @@ use Exception;
 
 const INDENT_LENGTH = 4;
 
-function getIndent($depth)
+function getIndent(int $depth): string
 {
     return str_repeat(' ', INDENT_LENGTH * $depth);
 }
 
-function toString($value)
+/**
+ * Transform $value to string
+
+ * @param mixed $value bool|array|int
+
+ * @return string
+ */
+function toString($value): string
 {
     if ($value === null) {
         return 'null';
     }
     return trim(var_export($value, true), "'");
 }
-
-function stringify($value, $depth)
+/**
+ * @param mixed $value
+ * @param int $depth
+ *
+ * @return string
+ */
+function stringify($value, int $depth): string
 {
     if (!is_object($value)) {
         return toString($value);
     }
 
-    $stringifyValue = function ($currentValue, $depth) {
+    $stringifyValue = function ($currentValue, $depth): string {
         $indent = getIndent($depth);
-        $iter = function ($value, $key) use ($depth, $indent) {
+        $iter = function ($value, $key) use ($depth, $indent): string {
             $formattedValue = stringify($value, $depth);
             return "{$indent}    {$key}: {$formattedValue}";
         };
@@ -37,8 +49,14 @@ function stringify($value, $depth)
     };
     return $stringifyValue($value, $depth + 1);
 }
+/**
+ * Transform $differTree to string
 
-function format($tree, $depth = 0)
+ * @param array<mixed> $tree differTree
+
+ * @return string
+ */
+function format(array $tree, int $depth = 0): string
 {
     $indent = getIndent($depth);
     $lines = array_map(function ($item) use ($indent, $depth) {
