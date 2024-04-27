@@ -6,12 +6,12 @@ use Exception;
 
 const INDENT_LENGTH = 4;
 
-function getIndent(int $depth): string
+function getIndent($depth)
 {
     return str_repeat(' ', INDENT_LENGTH * $depth);
 }
 
-function toString($value): string
+function toString($value)
 {
     if ($value === null) {
         return 'null';
@@ -19,15 +19,15 @@ function toString($value): string
     return trim(var_export($value, true), "'");
 }
 
-function stringify($value, int $depth): string
+function stringify($value, $depth)
 {
     if (!is_object($value)) {
         return toString($value);
     }
 
-    $stringifyValue = function ($currentValue, $depth): string {
+    $stringifyValue = function ($currentValue, $depth) {
         $indent = getIndent($depth);
-        $iter = function ($value, $key) use ($depth, $indent): string {
+        $iter = function ($value, $key) use ($depth, $indent) {
             $formattedValue = stringify($value, $depth);
             return "{$indent}    {$key}: {$formattedValue}";
         };
@@ -38,7 +38,7 @@ function stringify($value, int $depth): string
     return $stringifyValue($value, $depth + 1);
 }
 
-function format(array $tree, int $depth = 0): string
+function format($tree, $depth = 0)
 {
     $indent = getIndent($depth);
     $lines = array_map(function ($item) use ($indent, $depth) {
