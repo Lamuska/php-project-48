@@ -4,3 +4,7 @@
 
 ### Install:
 $ git clone git@github.com:Lamuska/php-project-48.git
+
+### Example usage:
+[![asciicast](https://asciinema.org/a/2MXQAfWsikYJ8pbEsnVGgRNR1.svg)](https://asciinema.org/a/2MXQAfWsikYJ8pbEsnVGgRNR1)
+[![asciicast](https://asciinema.org/a/db2Sjzjh514dNLrzq6hIaAYXw.svg)](https://asciinema.org/a/db2Sjzjh514dNLrzq6hIaAYXw)
