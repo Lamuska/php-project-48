@@ -3,9 +3,9 @@
 <a href="https://codeclimate.com/github/Lamuska/php-project-48/maintainability"><img src="https://api.codeclimate.com/v1/badges/88be82c4ae7b1dc103db/maintainability" /></a>
 [![Test Coverage](https://api.codeclimate.com/v1/badges/88be82c4ae7b1dc103db/test_coverage)](https://codeclimate.com/github/Lamuska/php-project-48/test_coverage)
 
-### Install:
-$ git clone git@github.com:Lamuska/php-project-48.git
+# Install:
+`git clone https://github.com/Lamuska/php-project-48.git`
 
-### Example usage:
+# Example usage:
 [![asciicast](https://asciinema.org/a/2MXQAfWsikYJ8pbEsnVGgRNR1.svg)](https://asciinema.org/a/2MXQAfWsikYJ8pbEsnVGgRNR1)
 [![asciicast](https://asciinema.org/a/db2Sjzjh514dNLrzq6hIaAYXw.svg)](https://asciinema.org/a/db2Sjzjh514dNLrzq6hIaAYXw)
