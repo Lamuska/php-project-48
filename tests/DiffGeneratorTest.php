@@ -39,8 +39,8 @@ class DiffGeneratorTest extends TestCase
         $expectedStylish = file_get_contents($this->getFilePath('StylishExpected.txt'));
         [$firstPathJson, $secondPathJson, $firstPathYaml, $secondPathYaml] = $this->getFilePaths();
 
-        //$this->assertEquals($expectedStylish, genDiff($firstPathJson, $secondPathJson, 'stylish'));
-        //$this->assertEquals($expectedStylish, genDiff($firstPathYaml, $secondPathYaml, 'stylish'));
+        $this->assertEquals($expectedStylish, genDiff($firstPathJson, $secondPathJson, 'stylish'));
+        $this->assertEquals($expectedStylish, genDiff($firstPathYaml, $secondPathYaml, 'stylish'));
     }
     /**
      * @return void
