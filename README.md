@@ -2,6 +2,7 @@
 [![Actions Status](https://github.com/Lamuska/php-project-48/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Lamuska/php-project-48/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/88be82c4ae7b1dc103db/maintainability)](https://codeclimate.com/github/Lamuska/php-project-48/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/88be82c4ae7b1dc103db/test_coverage)](https://codeclimate.com/github/Lamuska/php-project-48/test_coverage)
+[![Github Actions Status](https://github.com/Lamuska/php-project-48/workflows/PHP%20CI/badge.svg)](https://github.com/Lamuska/php-project-48/actions)
 
 # Install:
 `git clone https://github.com/Lamuska/php-project-48.git`
