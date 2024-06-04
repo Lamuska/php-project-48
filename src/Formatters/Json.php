@@ -4,6 +4,11 @@ namespace Differ\Differ\Json;
 
 use Exception;
 
+/**
+ * @param array $differTree
+ *
+ * @return string
+ */
 function format(array $differTree): string
 {
     $result = json_encode($differTree, JSON_PRETTY_PRINT);
